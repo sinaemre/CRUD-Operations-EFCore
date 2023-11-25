@@ -1,0 +1,22 @@
+﻿
+--Paket Kurulumları
+	.NET 6 için => 
+	install-package microsoft.entityframeworkcore.sqlserver -v 6.0.13
+	install-package microsoft.entityframeworkcore.tools -v 6.0.13
+
+	.NET 7 için => 
+	install-package microsoft.entityframeworkcore.sqlserver -v 7.0.13
+	install-package microsoft.entityframeworkcore.tools -v 7.0.13
+
+	.NET 8 için => (Eğer versiyon yazmazsanız en güncel paketi yükler 8.0.0)
+	install-package microsoft.entityframeworkcore.sqlserver
+	install-package microsoft.entityframeworkcore.tools
+
+--Migration Komutu
+	add-migration InitialCreate
+
+--SQL Server'a yükleme komutu
+	update-database
+
+--En son migration'ı silme komutu
+	remove-migration
